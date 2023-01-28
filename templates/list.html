@@ -1,0 +1,7 @@
+<!--templates/list-->
+<i><h2 align="right"><a href="{% url 'new' %}">+ New</a>|<a href="{% url 'accomplished_list' %}">Accomplished</a></h1></i>
+{% for mylist in list %}
+<ul>
+<li><h1><a href="{% url 'detail' pk=mylist.pk %}">{{mylist.task}}</a></h1></li></br>
+</ul>
+{% endfor %}

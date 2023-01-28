@@ -1,0 +1,6 @@
+<!--templates/detail.html-->
+<h1><a href="{% url 'list' %}">{{ detail.task|linebreaksbr }}</a></h1>
+<h3>{{ detail.created_on }}</h3>
+{% if not detail.accomplished %}
+<i>Click accomplished if task is completed </i><a class="btn btn-default" href="{% url 'accomplish' pk=detail.pk %}">Task Accomplished</a>
+{% endif%}

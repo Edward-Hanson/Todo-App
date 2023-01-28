@@ -1,0 +1,6 @@
+<!--templates/list-->
+{% for mylist in tasks %}
+<ul>
+<li><h1><a href="{% url 'detail' pk=mylist.pk %}">{{mylist.task}}</a></h1></li></br>
+</ul>
+{% endfor %}

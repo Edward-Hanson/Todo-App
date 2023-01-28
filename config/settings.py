@@ -37,12 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #local apps  
     'accounts',
+    'todo',
     
-    
+    #third party
     'crispy_forms',
 ]
 
+TIME_ZONE = 'Ghana/Accra'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
