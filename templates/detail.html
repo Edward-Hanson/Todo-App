@@ -2,5 +2,6 @@
 <h1><a href="{% url 'list' %}">{{ detail.task|linebreaksbr }}</a></h1>
 <h3>{{ detail.created_on }}</h3>
 {% if not detail.accomplished %}
-<i>Click accomplished if task is completed </i><a class="btn btn-default" href="{% url 'accomplish' pk=detail.pk %}">Task Accomplished</a>
+<i>Click accomplished if task is completed </i><a class="btn btn-default" href="{% url 'accomplish' detail.pk %}">Task Accomplished</a></br>
+<i><a href="{% url 'delete' pk=detail.pk%}">Delete</a>|<a href="{% url 'edit' pk=detail.pk%}">Edit</a></i>
 {% endif%}
